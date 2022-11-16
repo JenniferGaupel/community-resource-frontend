@@ -5,11 +5,7 @@ const ResourceGroupList = () => {
   const [resourceGroups, setResourceGroups] = useState([]);
 
   var rows = [];
-  
-  // for (resourceGroup in resourceGroups){
-  //   rows.push({id: i, col1: "hello" + i, col2: "world" + i});
-  //   i++;
-  // }
+
   resourceGroups.map((rg) => 
       rows.push({id: rg.id, col1: rg.resource_name, col2: rg.resource_description, col3: rg.main_resources, col4: rg.location})
   )
