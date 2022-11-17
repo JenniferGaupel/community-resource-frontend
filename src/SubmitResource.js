@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, Input, FormLabel, TextField } from '@mui/material';
+import { FormControl, FormLabel, TextField, Button} from '@mui/material';
 
 const SubmitResource = () => {  
 
@@ -9,153 +9,154 @@ const SubmitResource = () => {
                     Resource Name
                     <TextField size="small"
                         id="resource-name"
-                    />
+                    />                               
                 </FormLabel>
+                {/* <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>          */}
                 <FormLabel htmlFor="resource-description">
                     Resource Description or Mission
-                    <TextField
+                    <TextField size="small"
                         id="resource-description"
                     />
                 </FormLabel>        
-                {/* <InputLabel htmlFor="resources-available">
+                <FormLabel htmlFor="resources-available">
                     Types of resources available
-                    <Input
+                    <TextField size="small"
                         id="resources-available"
                     />
-                </InputLabel>                     
-                <InputLabel htmlFor="donations-accepted">
+                </FormLabel>                     
+                <FormLabel htmlFor="donations-accepted">
                     Donations accepted yes or no?
-                    <Input
+                    <TextField size="small"
                         id="donations-accepted"
                     />
-                </InputLabel>                       
-                <InputLabel htmlFor="business-address-1">
+                </FormLabel>                       
+                <FormLabel htmlFor="business-address-1">
                     Business address line 1
-                    <Input
+                    <TextField size="small"
                         id="business-address-1"
                     />
-                </InputLabel>  
-                <InputLabel htmlFor="business-address-2">
+                </FormLabel>  
+                <FormLabel htmlFor="business-address-2">
                     Business address line 2
-                    <Input
+                    <TextField size="small"
                         id="business-address-2"
                     />
-                </InputLabel>  
-                <InputLabel htmlFor="business-city">
+                </FormLabel>  
+                <FormLabel htmlFor="business-city">
                     Business city
-                    <Input
+                    <TextField size="small"
                         id="business-city"
                     />
-                </InputLabel>  
-                <InputLabel htmlFor="business-state">
+                </FormLabel>  
+                <FormLabel htmlFor="business-state">
                     Business state
-                    <Input
+                    <TextField size="small"
                         id="business-state"
                     />
-                </InputLabel>  
-                <InputLabel htmlFor="business-zip-code">
+                </FormLabel>  
+                <FormLabel htmlFor="business-zip-code">
                     Business zip code
-                    <Input
+                    <TextField size="small"
                         id="business-zip-code"
                     />
-                </InputLabel>
-                <InputLabel htmlFor="physical-address-1">
+                </FormLabel>
+                <FormLabel htmlFor="physical-address-1">
                     Physical address line 1
-                    <Input
+                    <TextField size="small"
                         id="physical-address-1"
                     />
-                </InputLabel>  
-                <InputLabel htmlFor="physical-address-2">
+                </FormLabel>  
+                <FormLabel htmlFor="physical-address-2">
                     Physical address line 2
-                    <Input
+                    <TextField size="small"
                         id="physical-address-2"
                     />
-                </InputLabel>  
-                <InputLabel htmlFor="physical-city">
+                </FormLabel>  
+                <FormLabel htmlFor="physical-city">
                     Physical city
-                    <Input
+                    <TextField size="small"
                         id="physical-city"
                     />
-                </InputLabel>  
-                <InputLabel htmlFor="physical-state">
+                </FormLabel>  
+                <FormLabel htmlFor="physical-state">
                     Physcial state
-                    <Input
+                    <TextField size="small"
                         id="physical-state"
                     />
-                </InputLabel>  
-                <InputLabel htmlFor="physical-zip-code">
+                </FormLabel>  
+                <FormLabel htmlFor="physical-zip-code">
                     Pyshical zip code
-                    <Input
+                    <TextField size="small"
                         id="physical-zip-code"
                     />
-                </InputLabel>                                                                                                           
-                <InputLabel htmlFor="phone-number">
+                </FormLabel>                                                                                                           
+                <FormLabel htmlFor="phone-number">
                     Phone number
-                    <Input
+                    <TextField size="small"
                         id="phone-number"
                     />
-                </InputLabel>    
-                <InputLabel htmlFor="email">
+                </FormLabel>    
+                <FormLabel htmlFor="email">
                     Email address
-                    <Input
+                    <TextField size="small"
                         id="email"
                     />
-                </InputLabel>                    
-                <InputLabel htmlFor="website">
+                </FormLabel>                    
+                <FormLabel htmlFor="website">
                     Website
-                    <Input
+                    <TextField size="small"
                         id="website"
                     />
-                </InputLabel>                         
-                <InputLabel htmlFor="twitter">
+                </FormLabel>                         
+                <FormLabel htmlFor="twitter">
                     Twitter
-                    <Input
+                    <TextField size="small"
                         id="twitter"
                     />
-                </InputLabel>                           
-                <InputLabel htmlFor="facebook">
+                </FormLabel>                           
+                <FormLabel htmlFor="facebook">
                     Facebook
-                    <Input
+                    <TextField size="small"
                         id="facebook"
                     />
-                </InputLabel>                            
-                <InputLabel htmlFor="instagram">
+                </FormLabel>                            
+                <FormLabel htmlFor="instagram">
                     Instagram
-                    <Input
+                    <TextField size="small"
                         id="instagram"
                     />
-                </InputLabel>              
-                <InputLabel htmlFor="additional-contact">
+                </FormLabel>              
+                <FormLabel htmlFor="additional-contact">
                     Additional contacts
-                    <Input
+                    <TextField size="small"
                         id="additional-contact"
                     />
-                </InputLabel>                      
-                <InputLabel htmlFor="venmo">
+                </FormLabel>                      
+                <FormLabel htmlFor="venmo">
                     Venmo
-                    <Input
+                    <TextField size="small"
                         id="venmo"
                     />
-                </InputLabel>   
-                <InputLabel htmlFor="paypal">
+                </FormLabel>   
+                <FormLabel htmlFor="paypal">
                     Paypal
-                    <Input
+                    <TextField size="small"
                         id="paypal"
                     />
-                </InputLabel>   
-                <InputLabel htmlFor="cash-app">
+                </FormLabel>   
+                <FormLabel htmlFor="cash-app">
                     Cash app
-                    <Input
+                    <TextField size="small"
                         id="cash-app"
                     />
-                </InputLabel>   
-                <InputLabel htmlFor="zelle">
+                </FormLabel>   
+                <FormLabel htmlFor="zelle">
                     Zelle
-                    <Input
+                    <TextField size="small"
                         id="zelle"
                     />
-                </InputLabel>                                                                                          */}
-                <button>Submit</button>
+                </FormLabel>                                                                                         
+                <Button>Submit</Button>
             </FormControl>
         </div>
     );
