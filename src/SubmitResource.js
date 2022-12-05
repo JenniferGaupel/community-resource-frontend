@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { FormControl, FormLabel, TextField, Button} from '@mui/material';
 
 const SubmitResource = () => {  
+    const [message, setMessage] = useState("");       
     const [resourceName, setResourceName] = useState("");
     const [resourceDescription, setResourceDescription] = useState("");
     const [businessAddress1, setBusinessAddress1] = useState("");
@@ -27,11 +28,8 @@ const SubmitResource = () => {
     const [additionalContacts, setAdditionalContacts] = useState("");       
     const [resourcesAvailable, setResourcesAvailable] = useState("");       
 
-    async function createResource () {
-        
-        // console.log({resourceName})
+    async function createResource () {    
         const res = await fetch(
-
             `http://172.23.0.3/api/v1/resource-groups/submit-resource`, {method: 'POST',
                                                         headers: { 'Content-Type': 'application/json' },
                                                         body: JSON.stringify({ 
@@ -62,13 +60,33 @@ const SubmitResource = () => {
                                                         })}
         );
         const json = await res.json();
-
-        console.log(json.Message)
+        const resStatus = res.status;
+        if(resStatus === 201){
+            console.log(json.resource_name + json.resource_description);
+            document.getElementById('new-resource-form').reset();
+            setMessage("Resource group " + json.resource_name + " was successfully submitted!");
+        }
+        else if(resStatus === 400){
+            console.log(json.Message)
+            setMessage("Resource group name is required!")
+        }                                                        
+        else if (resStatus === 409){
+            console.log(json.Message)
+            setMessage("A resource group by that name already exists or has already been submitted. Please contact me if you have any qusetions!")
+        }
+        else{
+            console.log(json.Message);
+            setMessage("Something went wrong. Please check the form and try submitting again. If this error continues please contact me!")
+        }
     }
 
     return (
         <div>
-            <form
+            <div>
+                <h1>Blaj blah how to fill out the form</h1>   
+                <p>{message}</p>
+            </div>
+            <form id="new-resource-form"
                 onSubmit={(e) => {
                     e.preventDefault();
                     createResource();
