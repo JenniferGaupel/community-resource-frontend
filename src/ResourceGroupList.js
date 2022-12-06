@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import SubmitResourceButton from './SubmitResourceButton';
+import { useNavigate, Link } from 'react-router-dom';
 
 const ResourceGroupList = () => {  
   const [resourceGroups, setResourceGroups] = useState([]);
-
+  const navigate = useNavigate();
   var rows = [];
 
   resourceGroups.map((rg) => 
@@ -28,12 +30,22 @@ const ResourceGroupList = () => {
   
     setResourceGroups(json.resource_groups);
   }
-   
+
+  const navigateToResourceDetails: GridEventListener<'rowClick'> = (
+    params,
+    event, 
+    details,
+  ) => {
+    var id = params.row.id
+    navigate(`/resource/${id}`);    
+  };
+
     return (      
-      <div style={{ height: 650, width: '100%' }}>
+      <div style={{ height: 650, width: '100%' }}>        
         <div>List of Resources:</div>
         <DataGrid 
-          rows={rows} columns={columns} />
+          rows={rows} columns={columns} onRowClick={navigateToResourceDetails} />         
+        <SubmitResourceButton/>          
       </div>
     );
   };
