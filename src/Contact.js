@@ -3,7 +3,7 @@ import SubmitResourceButton from './SubmitResourceButton';
 const Contact = () =>{
     return(
         <div>
-            <p>This is the contact page!</p>
+            <p>Please email webmaster@cincinnaticommunityaid.com with any questions, issues or feedback.</p>
             <SubmitResourceButton/>
         </div>
     )

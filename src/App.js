@@ -11,6 +11,8 @@ function App() {
     <div className="App">
       <header> 
         <Link to="/">Community Resource Home Page</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/about">About</Link>               
       </header>    
       <Routes>
         <Route path="/resource/:id" element={<SingleResourceGroup/>}/>
@@ -18,9 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/" element={<ResourceGroupList/>}/>
-      </Routes>   
-        <Link to="/contact">Contact</Link>
-        <Link to="/about">About</Link>              
+      </Routes>               
     </div>
   );
 }
