@@ -24,6 +24,11 @@
   color: white;
 }
 
+header #home-link {
+  position: absolute;
+  left: 0;
+}
+
 .App-link {
   color: #61dafb;
 }
