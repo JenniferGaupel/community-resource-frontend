@@ -45,14 +45,16 @@ const ResourceGroupList = () => {
   };
 
   return (
-    <div style={{ height: 650, width: "100%" }}>
-      <div>List of Resources:</div>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        onRowClick={navigateToResourceDetails}
-      />
-      <SubmitResourceLink />
+    <div id="resource-grid">
+      <div style={{ height: 500, width: "50%" }}>
+        <div>List of Resources:</div>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          onRowClick={navigateToResourceDetails}
+        />
+        <SubmitResourceLink />
+      </div>
     </div>
   );
 };

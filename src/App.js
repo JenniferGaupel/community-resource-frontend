@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <header>
         <Link id="home-link" to="/">
-          Community Resource Home Page
+          <div id="resource-home">Community Resource Home Page</div>
         </Link>
         <Link to="/contact">Contact</Link>
         <Link to="/about">About</Link>

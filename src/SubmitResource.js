@@ -341,7 +341,7 @@ const SubmitResource = () => {
               }}
             />
           </FormLabel>
-          <Button variant="outlined">Submit</Button>
+          <button>Submit</button>
         </FormControl>
       </form>
     </div>

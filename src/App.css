@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+}
 .App {
   text-align: center;
 }
@@ -40,4 +44,27 @@ header #home-link {
   to {
     transform: rotate(360deg);
   }
+}
+
+#resource-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 500px;
+}
+
+#resource-home {
+  color: white;
+  width: 85px;
+  height: 70px;
+  background-color: #000080;
+}
+
+#submit-resource {
+  margin-top: 50px;
+}
+
+header {
+  margin-top: 20px;
 }
