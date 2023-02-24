@@ -1,4 +1,4 @@
-import SubmitResourceLink from "./SubmitResourceLink";
+import SubmitResourceLink from "./SubmitResourceButton";
 import { Link } from "react-router-dom";
 
 const About = () => {

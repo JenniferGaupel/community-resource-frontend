@@ -20,3 +20,4 @@ dist
 .env
 coverage/
 .vscode/
+node_modules

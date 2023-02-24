@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SubmitResourceLink from "./SubmitResourceLink";
+import SubmitResourceLink from "./SubmitResourceButton";
 import { useParams } from "react-router-dom";
 import Button from "@mui/material/Button";
 

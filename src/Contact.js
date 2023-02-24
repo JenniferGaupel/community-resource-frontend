@@ -1,4 +1,4 @@
-import SubmitResourceLink from "./SubmitResourceLink";
+import SubmitResourceLink from "./SubmitResourceButton";
 
 const Contact = () => {
   return (

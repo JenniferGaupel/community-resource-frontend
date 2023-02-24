@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import SubmitResourceLink from "./SubmitResourceLink";
-import { useNavigate, Link } from "react-router-dom";
+import SubmitResourceButton from "./SubmitResourceButton";
+import { useNavigate } from "react-router-dom";
 
 const ResourceGroupList = () => {
   const [resourceGroups, setResourceGroups] = useState([]);
@@ -45,15 +45,15 @@ const ResourceGroupList = () => {
   };
 
   return (
-    <div id="resource-grid">
+    <div id="resource-grid" className="flex items-center justify-center mt-5">
       <div style={{ height: 500, width: "50%" }}>
-        <div>List of Resources:</div>
+        <div className="text-center">List of Resources:</div>
         <DataGrid
           rows={rows}
           columns={columns}
           onRowClick={navigateToResourceDetails}
         />
-        <SubmitResourceLink />
+        <SubmitResourceButton />
       </div>
     </div>
   );

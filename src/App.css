@@ -1,11 +1,16 @@
-* {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
   font-family: sans-serif;
   background-color: #f5f5f5;
-}
-.App {
-  text-align: center;
-}
+} */
 
+/* .App {
+  text-align: center;
+} */
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -16,8 +21,8 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
+*/
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -26,14 +31,14 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-header #home-link {
+} */
+/*
+/* header #home-link {
   position: absolute;
   left: 0;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
 }
 
@@ -52,19 +57,19 @@ header #home-link {
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 500px;
-}
+} */
 
-#resource-home {
-  color: white;
+/* #resource-home { */
+/* color: white;
   width: 85px;
   height: 70px;
-  background-color: #000080;
-}
+  background-color: #000080; */
+/* } */
 
-#submit-resource {
+/* #submit-resource {
   margin-top: 50px;
 }
 
 header {
   margin-top: 20px;
-}
+} */

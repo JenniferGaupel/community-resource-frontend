@@ -87,7 +87,7 @@ const SubmitResource = () => {
   }
 
   return (
-    <div>
+    <div className="bg-gray-50">
       <div>
         <h1>Blaj blah how to fill out the form</h1>
         <p>{message}</p>

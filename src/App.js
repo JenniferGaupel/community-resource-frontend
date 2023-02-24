@@ -8,13 +8,21 @@ import Contact from "./Contact";
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-gray-50 h-screen">
       <header>
-        <Link id="home-link" to="/">
+        <Link
+          className="flex items-center justify-center mb-5"
+          id="home-link"
+          to="/"
+        >
           <div id="resource-home">Community Resource Home Page</div>
         </Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/about">About</Link>
+        <div className="flex items-center justify-center">
+          <Link className="mr-20" to="/contact">
+            Contact
+          </Link>
+          <Link to="/about">About</Link>
+        </div>
       </header>
       <Routes>
         <Route path="/resource/:id" element={<SingleResourceGroup />} />
