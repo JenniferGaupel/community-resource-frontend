@@ -10,14 +10,16 @@ function App() {
   return (
     <div className="bg-gray-50 h-screen">
       <header>
-        <Link
-          className="flex items-center justify-center mb-5"
-          id="home-link"
-          to="/"
+        <div
+          className="flex items-center justify-center mb-5 color text-white text-center"
+          style={{ backgroundColor: "#000080" }}
         >
-          <div id="resource-home">Community Resource Home Page</div>
-        </Link>
+          Cincinnati Community Resources
+        </div>
         <div className="flex items-center justify-center">
+          <Link className="mr-20" to="/">
+            Home
+          </Link>
           <Link className="mr-20" to="/contact">
             Contact
           </Link>

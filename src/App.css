@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
+* {
   font-family: sans-serif;
-  background-color: #f5f5f5;
-} */
+}
 
 /* .App {
   text-align: center;

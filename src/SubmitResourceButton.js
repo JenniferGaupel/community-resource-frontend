@@ -9,7 +9,10 @@ const SubmitResourceButton = () => {
 
   return (
     <div className="flex items-center justify-center mt-5 ">
-      <button onClick={navigateToSubmitResource}>
+      <button
+        className="bg-transparent py-2 px-4 border border-black rounded"
+        onClick={navigateToSubmitResource}
+      >
         Click here to submit a new resource
       </button>
     </div>
