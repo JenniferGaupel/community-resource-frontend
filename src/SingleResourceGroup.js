@@ -70,90 +70,99 @@ const SingleResourceGroup = () => {
     }
   }
   return (
-    <div>
-      <h1>{resourceGroup.resource_name}</h1>
-      <p>Mission/About: {resourceGroup.resource_description}</p>
-      <p>Contacts:</p>
-      {resourceGroup.business_address_1 && (
-        <p>
-          Bussiness Address:
-          {resourceGroup.business_address_1} {resourceGroup.business_city},
-          {resourceGroup.business_state}
-          {resourceGroup.business_zip_code}
-        </p>
-      )}
-      {resourceGroup.physical_address_1 && (
-        <p>
-          Location:
-          {resourceGroup.physical_address_1} {resourceGroup.physical_address_2}
-          {resourceGroup.physical_city},{resourceGroup.physical_state}
-          {resourceGroup.physical_zip_code}
-        </p>
-      )}
-      {resourceGroup.website && (
-        <p>
-          Website:
-          {resourceGroup.website}
-        </p>
-      )}
-      {resourceGroup.phone_number && (
-        <p>
-          Phone Number:
-          {resourceGroup.phone_number}
-        </p>
-      )}
-      {resourceGroup.email && (
-        <p>
-          Email Address:
-          {resourceGroup.email}
-        </p>
-      )}
-      {resourceGroup.instagram && (
-        <p>
-          Instagram:
-          {resourceGroup.instagram}
-        </p>
-      )}
-      {resourceGroup.twitter && (
-        <p>
-          Twitter:
-          {resourceGroup.twitter}
-        </p>
-      )}
-      {resourceGroup.facebook && (
-        <p>
-          Facebook:
-          {resourceGroup.facebook}
-        </p>
-      )}
-      {resourceGroup.additional_contacts && (
-        <p>
-          Addtional Contacts:
-          {resourceGroup.additional_contacts}
-        </p>
-      )}
-      <Button
-        variant="outlined"
-        id="show-receiver-resources"
-        onClick={showReceiverResources}
-      >
-        I am looking for resources
-      </Button>
-      <Button
-        variant="outlined"
-        id="show-donator-resources"
-        onClick={showDonatorResources}
-      >
-        I want to donate resources
-      </Button>
-      <p>{howToGiveOrGet}</p>
-      <p>{notes}</p>
-      <p>
-        {venmo}
-        {paypal}
-        {cashApp}
-        {zelle}
-      </p>
+    <div className="mt-5">
+      <div className="text-center">
+        <ul className="list-none">
+          <li>{resourceGroup.resource_name}</li>
+          <li>Mission/About: {resourceGroup.resource_description}</li>
+          <li>Contacts:</li>
+          {resourceGroup.business_address_1 && (
+            <li>
+              Bussiness Address:
+              {resourceGroup.business_address_1} {resourceGroup.business_city},
+              {resourceGroup.business_state}
+              {resourceGroup.business_zip_code}
+            </li>
+          )}
+          {resourceGroup.physical_address_1 && (
+            <li>
+              Location:
+              {resourceGroup.physical_address_1}{" "}
+              {resourceGroup.physical_address_2}
+              {resourceGroup.physical_city},{resourceGroup.physical_state}
+              {resourceGroup.physical_zip_code}
+            </li>
+          )}
+          {resourceGroup.website && (
+            <li>
+              Website:
+              {resourceGroup.website}
+            </li>
+          )}
+          {resourceGroup.phone_number && (
+            <li>
+              Phone Number:
+              {resourceGroup.phone_number}
+            </li>
+          )}
+          {resourceGroup.email && (
+            <li>
+              Email Address:
+              {resourceGroup.email}
+            </li>
+          )}
+          {resourceGroup.instagram && (
+            <li>
+              Instagram:
+              {resourceGroup.instagram}
+            </li>
+          )}
+          {resourceGroup.twitter && (
+            <li>
+              Twitter:
+              {resourceGroup.twitter}
+            </li>
+          )}
+          {resourceGroup.facebook && (
+            <li>
+              Facebook:
+              {resourceGroup.facebook}
+            </li>
+          )}
+          {resourceGroup.additional_contacts && (
+            <li>
+              Addtional Contacts:
+              {resourceGroup.additional_contacts}
+            </li>
+          )}
+        </ul>
+      </div>
+      <div className="text-center mt-5">
+        <button
+          className="bg-transparent py-2 px-4 border border-black rounded mr-5"
+          // variant="outlined"
+          onClick={showReceiverResources}
+        >
+          I am looking for resources
+        </button>
+        <button
+          className="bg-transparent py-2 px-4 border border-black rounded"
+          // variant="outlined"
+          onClick={showDonatorResources}
+        >
+          I want to donate resources
+        </button>
+        <ul className="list-none mt-5">
+          <li>{howToGiveOrGet}</li>
+          <li>{notes}</li>
+          <li>
+            {venmo}
+            {paypal}
+            {cashApp}
+            {zelle}
+          </li>
+        </ul>
+      </div>
       <SubmitResourceLink />
     </div>
   );
