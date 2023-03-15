@@ -72,278 +72,315 @@ const SubmitResource = () => {
       );
     } else if (resStatus === 400) {
       console.log(json.Message);
-      setMessage("Resource group name is required!");
+      setMessage("Resource group name is required.");
     } else if (resStatus === 409) {
       console.log(json.Message);
       setMessage(
-        "A resource group by that name already exists or has already been submitted. Please contact me if you have any qusetions!"
+        "A resource group by that name already exists or has already been submitted."
       );
     } else {
       console.log(json.Message);
       setMessage(
-        "Something went wrong. Please check the form and try submitting again. If this error continues please contact me!"
+        "Something went wrong. Please check the form and try submitting again. If this error continues please contact me."
       );
     }
+    scrollToTop();
+  }
+
+  function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
   return (
-    <div className="bg-gray-50">
-      <div>
-        <h1>Blaj blah how to fill out the form</h1>
-        <p>{message}</p>
+    <div className="bg-gray-50 ">
+      <div className="w-2/4 m-auto text-center">
+        <div className="my-5">
+          <h1>
+            Please fill out this form to submit a new resource.
+            <br /> Resource Name is the only required field.
+            <br />
+            All resources are manually reviewed. Contact me with any questions!
+          </h1>
+          <p className="mt-1 text-red-600">{message}</p>
+        </div>
+        <form
+          id="new-resource-form"
+          className=""
+          onSubmit={(e) => {
+            e.preventDefault();
+            createResource();
+          }}
+        >
+          <label htmlFor="resource-name">Resource Name:</label>
+          <br />
+          <input
+            type="text"
+            id="resource-name"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setResourceName(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="resource-description">Resource Description:</label>
+          <br />
+          <input
+            type="text"
+            id="resource-description"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setResourceDescription(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="resources-available">Resources Availble:</label>
+          <br />
+          <input
+            type="text"
+            id="resources-available"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setResourcesAvailable(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="business-address-1">Business Address Line 1:</label>
+          <br />
+          <input
+            type="text"
+            id="business-address-1"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setBusinessAddress1(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="business-address-2">Business Address Line 2:</label>
+          <br />
+          <input
+            type="text"
+            id="business-address-2"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setBusinessAddress2(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="business-city">Business City:</label>
+          <br />
+          <input
+            type="text"
+            id="business-city"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setBusinessCity(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="business-state">Business State:</label>
+          <br />
+          <input
+            type="text"
+            id="business-state"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setBusinessState(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="business-zip-code">Business Zip Code:</label>
+          <br />
+          <input
+            type="text"
+            id="business-zip-code"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setBusinessZipCode(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="physical-address-1">Physical Address 1:</label>
+          <br />
+          <input
+            type="text"
+            id="physical-address-1"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setPhysicalAddress1(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="physical-address-2">Physical Address 2:</label>
+          <br />
+          <input
+            type="text"
+            id="physical-address-2"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setPhysicalAddress2(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="physical-city">Physical City:</label>
+          <br />
+          <input
+            type="text"
+            id="physical-city"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setPhysicalCity(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="physical-state">Physical State:</label>
+          <br />
+          <input
+            type="text"
+            id="physical-state"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setPhysicalState(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="physical-zip-code">Physical Zip Code:</label>
+          <br />
+          <input
+            type="text"
+            id="physical-zip-code"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setPhysicalZipCode(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="phone-number">Phone Number:</label>
+          <br />
+          <input
+            type="text"
+            id="phone-number"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setPhoneNumber(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="email">Email Address:</label>
+          <br />
+          <input
+            type="text"
+            id="email"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="website">Website:</label>
+          <br />
+          <input
+            type="text"
+            id="website"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setWebsite(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="twitter">Twitter:</label>
+          <br />
+          <input
+            type="text"
+            id="twitter"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setTwitter(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="facebook">Facebook:</label>
+          <br />
+          <input
+            type="text"
+            id="facebook"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setFacebook(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="instagram">Instagram:</label>
+          <br />
+          <input
+            type="text"
+            id="instagram"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setInstagram(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="additional-contact">Additional Contact:</label>
+          <br />
+          <input
+            type="text"
+            id="additional-contact"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setAdditionalContacts(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="venmo">Venmo:</label>
+          <br />
+          <input
+            type="text"
+            id="venmo"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setVenmo(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="paypal">Paypal:</label>
+          <br />
+          <input
+            type="text"
+            id="paypal"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setPaypal(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="cash-app">Cash App:</label>
+          <br />
+          <input
+            type="text"
+            id="cash-app"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setCashApp(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor="zelle">Zelle:</label>
+          <br />
+          <input
+            type="text"
+            id="zelle"
+            className="border border-black bg-gray-50 mb-1 rounded"
+            onChange={(e) => {
+              setZelle(e.target.value);
+            }}
+          />
+          <br />
+          <button className="bg-transparent py-2 px-4 border border-black rounded">
+            Submit
+          </button>
+        </form>
       </div>
-      <form
-        id="new-resource-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          createResource();
-        }}
-      >
-        <FormControl>
-          <FormLabel htmlFor="resource-name">
-            Resource Name
-            <TextField
-              size="small"
-              id="resource-name"
-              onChange={(e) => {
-                setResourceName(e.target.value);
-              }}
-            />
-          </FormLabel>
-          {/* <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>          */}
-          <FormLabel htmlFor="resource-description">
-            Resource Description or Mission
-            <TextField
-              size="small"
-              id="resource-description"
-              onChange={(e) => {
-                setResourceDescription(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="resources-available">
-            Types of resources available
-            <TextField
-              size="small"
-              id="resources-available"
-              onChange={(e) => {
-                setResourcesAvailable(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="business-address-1">
-            Business address line 1
-            <TextField
-              size="small"
-              id="business-address-1"
-              onChange={(e) => {
-                setBusinessAddress1(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="business-address-2">
-            Business address line 2
-            <TextField
-              size="small"
-              id="business-address-2"
-              onChange={(e) => {
-                setBusinessAddress2(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="business-city">
-            Business city
-            <TextField
-              size="small"
-              id="business-city"
-              onChange={(e) => {
-                setBusinessCity(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="business-state">
-            Business state
-            <TextField
-              size="small"
-              id="business-state"
-              onChange={(e) => {
-                setBusinessState(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="business-zip-code">
-            Business zip code
-            <TextField
-              size="small"
-              id="business-zip-code"
-              onChange={(e) => {
-                setBusinessZipCode(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="physical-address-1">
-            Physical address line 1
-            <TextField
-              size="small"
-              id="physical-address-1"
-              onChange={(e) => {
-                setPhysicalAddress1(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="physical-address-2">
-            Physical address line 2
-            <TextField
-              size="small"
-              id="physical-address-2"
-              onChange={(e) => {
-                setPhysicalAddress2(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="physical-city">
-            Physical city
-            <TextField
-              size="small"
-              id="physical-city"
-              onChange={(e) => {
-                setPhysicalCity(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="physical-state">
-            Physcial state
-            <TextField
-              size="small"
-              id="physical-state"
-              onChange={(e) => {
-                setPhysicalState(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="physical-zip-code">
-            Pyshical zip code
-            <TextField
-              size="small"
-              id="physical-zip-code"
-              onChange={(e) => {
-                setPhysicalZipCode(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="phone-number">
-            Phone number
-            <TextField
-              size="small"
-              id="phone-number"
-              onChange={(e) => {
-                setPhoneNumber(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="email">
-            Email address
-            <TextField
-              size="small"
-              id="email"
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="website">
-            Website
-            <TextField
-              size="small"
-              id="website"
-              onChange={(e) => {
-                setWebsite(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="twitter">
-            Twitter
-            <TextField
-              size="small"
-              id="twitter"
-              onChange={(e) => {
-                setTwitter(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="facebook">
-            Facebook
-            <TextField
-              size="small"
-              id="facebook"
-              onChange={(e) => {
-                setFacebook(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="instagram">
-            Instagram
-            <TextField
-              size="small"
-              id="instagram"
-              onChange={(e) => {
-                setInstagram(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="additional-contact">
-            Additional contacts
-            <TextField
-              size="small"
-              id="additional-contact"
-              onChange={(e) => {
-                setAdditionalContacts(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="venmo">
-            Venmo
-            <TextField
-              size="small"
-              id="venmo"
-              onChange={(e) => {
-                setVenmo(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="paypal">
-            Paypal
-            <TextField
-              size="small"
-              id="paypal"
-              onChange={(e) => {
-                setPaypal(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="cash-app">
-            Cash app
-            <TextField
-              size="small"
-              id="cash-app"
-              onChange={(e) => {
-                setCashApp(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <FormLabel htmlFor="zelle">
-            Zelle
-            <TextField
-              size="small"
-              id="zelle"
-              onChange={(e) => {
-                setZelle(e.target.value);
-              }}
-            />
-          </FormLabel>
-          <button>Submit</button>
-        </FormControl>
-      </form>
     </div>
   );
 };
